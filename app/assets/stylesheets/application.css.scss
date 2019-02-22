@@ -24,11 +24,12 @@ h1, h2, h3 {
 }
 
 .home-callout, .navbar {
-    background: #1c92d2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(left, #f2fcfe, #1c92d2);
-    background: -moz-linear-gradient(left, #f2fcfe, #1c92d2);
-    background: -o-linear-gradient(left, #f2fcfe, #1c92d2);
-    background: linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,e9d4b3+100 */
+    background: rgb(243,226,199); /* Old browsers */    
+    background: -moz-linear-gradient(left, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(233,212,179,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(233,212,179,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(233,212,179,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3',GradientType=1 ); /* IE6-9 */
 }
 
 .navbar {
@@ -63,8 +64,8 @@ h1, h2, h3 {
 .home-callout {
     color: white;
     margin-top: -20px;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 30px;
+    padding-bottom: 400px;
 }
 
 .flash-container {
@@ -84,4 +85,31 @@ h1, h2, h3 {
 
 .margin-top-25 {
     margin-top: 25px;
+}
+
+.home-page-spider-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.home-page-spider-image {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+
+// .container {
+.home-page-spider-container {
+  position: absolute;
+  width: 100%;
+
+  animation: spider-anima 10s ease-out;
+  animation-fill-mode: forwards;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @keyframes spider-anima {
+    0%  { top: -100px; }
+    50% { top: 50%; }
+  }
 }

@@ -19,26 +19,18 @@
                         <span class="icon-bar"></span>
                     </button>
                     <%= link_to root_path, class: "navbar-brand" do %>
-                        <i class="fa fa-group"></i>
+                        <i class="fa fa-female custom"></i>
                         Charlotte's
                     <% end %>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                      <% comment do %>
                        <li><%= link_to "About", about_path %></li>
                        <li><%= link_to "Contact Us", new_contact_path %></li> 
-                      <% end %>
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <div class="container flash-container">
-          <% flash.each do |type, msg| %>
-              <%= content_tag :div, msg, class: "alert alert-#{type}" %>
-          <% end %>
-        </div>        
 
         <%= yield %>
         
